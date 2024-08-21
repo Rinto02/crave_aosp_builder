@@ -462,10 +462,6 @@ jobs:
         /opt/crave/resync.sh  && \
 
         # Set up build environment
-        sudo apt-get -y install ccache ; \
-        export USE_CCACHE=1 ; \
-        export CCACHE_EXEC=/usr/bin/ccache
-        ccache -M 5G
         export BUILD_USERNAME=${{ github.actor }} ; \
         export BUILD_HOSTNAME=crave ; \
         source build/envsetup.sh && \
